@@ -6,57 +6,33 @@ import { Link } from "react-router-dom";
 
 class Navbar extends Component {
   
-  state = { clicked: false };
-  handleclick = () =>{
-    this.setstate({ clicked: !this.state.clicked})
-  }
-
-
-
+ state = { clicked: false};
+ handleClick = () =>{
+  this.setState({ clicked: !this.state.clicked})}
   render() {
-  return (
+    return (
+
       <nav className="NavbarItems">
-      <h1 className="navebar-logo">weboxing</h1>
+        <h1 className="navebar-logo">weboxing</h1>
+                            {/**/}
+        <div className="menu-icons" onClick={this.handleClick}>
+          <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
+        </div>
 
-    <div className="menu-icons" onClick={this.handleclick}>
-
-    <i className={this.clicked ? "fas fa-times" : "fas fa-bars"}>
-    </i>
-      </div>
-
-
-    <ul className="nav-menu">
-
+        {/*sers a voir l'etat de mon burger ouvrir ou fermer*/}
+        <ul className={this.state.clicked ? "nav-menu active": "nav-menu"}>
           {MenuItems.map((item, index) =>{
-          return(
-
-          
-    <li key={index}>
-
-        <a className={item.cName}
-         href="/">
-
-        <i className={item.icon}>
-
-        </i>
-
-        {item.title}
-
-        </a>
-        </li>
-            )
-          })}
-       
-       <button>sign up</button>
-
-      
-  
-
-
-      </ul>
-      </nav>
-    );
-  }
-}
+          return(   
+              <li key={index}>
+              <Link cllinkssNlinkme={item.cName}to={item.URL}>
+              <i className={item.icon}></i>
+              {item.title}
+              </Link>
+              </li>
+              )
+              })} 
+            </ul>
+          </nav>
+        )}}
 
 export default Navbar;

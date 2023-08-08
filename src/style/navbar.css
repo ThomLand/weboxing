@@ -5,11 +5,12 @@
     padding: 0 34px;
     width: 95%;
     height: 80px;
-    background-color: rgb(136, 52, 52);
+    background-color:transparent;
+    z-index: 99;
 }
 
 .nav-menu{
-    display: grid;
+    display: none;
     grid-template-columns: repeat(6,auto);
     grid-gap: 10px;
     list-style: none;
@@ -37,7 +38,7 @@
 }
 
 .nav-links-mobile{
-    display: none;
+    display: flex;
 }
 
 button{
@@ -51,34 +52,74 @@ button{
     transition: 0s ease-in-out;
 }
 
+.menu-icons{
+    display: flex;
+}
+
 button:hover{
     background-color: black;
     color: blue;
 }
 
+.nav-menu.active{
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+}
 
 
-@media screen and (max-width: 850px) {
-    .nav-menu{
+
+
+
+    .NavbarItems{
+        z-index: 99;
+    }
+    .nav-menu {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        background-color: black;
+        background: #fff565;
         width: 100%;
         height: auto;
         position: absolute;
         top: 0;
-        left: 0;
+        left: -120%;
         opacity: 1;
         align-items: stretch;
         padding: 80px 0 30px 0;
         margin: 0;
+        text-align: center;
+        z-index: -1;
     }
-    
+
+    .nav-menu.active{
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+    }
     .nav-links{
         display: block;
         width: 100%;
         font-size: 1.2rem;
         padding: 2rem;
     }
-}
+    
+
+    .nav-links:hover{
+        background: purple;
+        transition: none;
+    }
+
+    .nav-links-mobile{
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: 4px;
+    width: 80%;
+    background: purple;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    }
