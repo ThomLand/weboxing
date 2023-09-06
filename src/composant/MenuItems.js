@@ -1,32 +1,33 @@
 export const MenuItems = [
     {
-        title: "Home",
+        title: " ACCUEIL",
         URL: "/",
         cName: "nav-links",
-        icon: "fa-solid fa-house"
+        icon: "fa-solid fa-house "
     },
     {
-        title: "produit",
+        title: " PRODUITS",
         URL: "/produit",
         cName: "nav-links",
-        icon: "fa-solid fa-circle-info"
+        icon: "fa-solid fa-briefcase "
+        
     },
     {
-        title: "service",
-        URL: "/service",
+        title: " SEANCE/SERVICE",
+        URL: "/seance",
         cName: "nav-links",
-        icon: "fa-solid fa-briefcase"
+        icon: "fa-solid fa-circle-info "
     },
     {
-        title: "contact",
+        title: " CONTACT",
         URL: "/contact",
         cName: "nav-links",
-        icon: "fa-solid fa-address-book"
+        icon: "fa-solid fa-address-book "
     },
     {
-        title: "sign Up",
+        title: "S'INSCRIRE",
         URL: "/signup",
-        cName: "nav-links-mobile"
+        cName: "nav-links-mobile "
     },
 ]
 
